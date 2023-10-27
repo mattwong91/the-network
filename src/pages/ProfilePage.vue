@@ -45,7 +45,7 @@
 <script>
 import { useRoute } from "vue-router";
 import { AppState } from '../AppState';
-import { computed, reactive, onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import Pop from "../utils/Pop";
 import { profilesService } from "../services/ProfilesService.js"
 import PostCard from "../components/PostCard.vue";

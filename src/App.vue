@@ -3,7 +3,23 @@
     <Navbar />
   </header>
   <main>
-    <router-view />
+    <div class="container-fluid">
+      <section class="row">
+        <!-- SECTION SIDEBAR? -->
+        <div class="col-3">
+          <h1>Sidebar</h1>
+        </div>
+        <!-- !SECTION SIDEBAR? -->
+        <div class="col-6">
+          <router-view />
+        </div>
+        <!-- SECTION ADS -->
+        <div class="col-3">
+          <h1>ADS</h1>
+        </div>
+        <!-- !SECTION ADS -->
+      </section>
+    </div>
   </main>
 </template>
 

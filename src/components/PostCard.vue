@@ -28,9 +28,8 @@
 
 
 <script>
-import { AppState } from '../AppState';
-import { computed, reactive, onMounted } from 'vue';
 import { Post } from "../models/Post";
+
 export default {
   props: {
     post: { type: Post, required: true }
