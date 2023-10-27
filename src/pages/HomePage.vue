@@ -7,9 +7,15 @@
 
       <!-- SECTION POSTS -->
       <div class="col-6">
-        <section class="row p-4">
+        <section v-if="posts.length" class="row p-4">
           <div v-for="post in posts" :key="post.id" class="col-12 mb-3">
             <PostCard :post="post" />
+          </div>
+          <Pagination />
+        </section>
+        <section v-else class="row text-center pt-5">
+          <div class="col-12 pt-5">
+            <div class="spinner-border" role="status"></div>
           </div>
         </section>
       </div>
@@ -28,6 +34,7 @@ import PostCard from "../components/PostCard.vue";
 import { AppState } from "../AppState";
 import Pop from "../utils/Pop";
 import { postsService } from "../services/PostsService.js"
+import Pagination from "../components/Pagination.vue";
 
 export default {
   setup() {
@@ -46,7 +53,7 @@ export default {
       posts: computed(() => AppState.posts)
     };
   },
-  components: { PostCard }
+  components: { PostCard, Pagination }
 }
 </script>
 
