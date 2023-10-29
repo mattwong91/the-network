@@ -1,7 +1,6 @@
 import { AppState } from "../AppState"
 import { Post } from "../models/Post"
 import { logger } from "../utils/Logger"
-import Pop from "../utils/Pop"
 import { api } from "./AxiosService"
 
 function setPosts(response) {
