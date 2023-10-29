@@ -10,7 +10,7 @@
           <h1>Sidebar</h1>
         </div>
         <!-- !SECTION SIDEBAR? -->
-        <div class="col-6">
+        <div class="col-6 hero-content">
           <router-view />
         </div>
         <!-- SECTION ADS -->
@@ -37,6 +37,7 @@ export default {
   components: { Navbar }
 }
 </script>
+
 <style lang="scss">
 @import "./assets/scss/main.scss";
 
@@ -44,10 +45,15 @@ export default {
   --main-height: calc(100vh - 32px - 64px);
 }
 
-
 footer {
   display: grid;
   place-content: center;
   height: 32px;
+}
+
+
+.hero-content {
+  overflow-y: scroll;
+  height: var(--main-height);
 }
 </style>

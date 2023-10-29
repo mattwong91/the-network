@@ -63,7 +63,7 @@ p {
 .post-img {
   object-fit: cover;
   width: 100%;
-  height: 60vh;
+  height: 55vh;
   object-position: center;
 }
 

@@ -15,6 +15,9 @@
           </router-link>
         </li>
       </ul>
+      <div class="px-3">
+        <router-link :to="{ name: 'SearchResults' }" class="btn btn-secondary mdi mdi-magnify"></router-link>
+      </div>
       <!-- LOGIN COMPONENT HERE -->
       <Login />
     </div>

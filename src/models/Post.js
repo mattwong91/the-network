@@ -8,6 +8,7 @@ export class Post {
     this.createdAt = new Date(data.createdAt)
     this.updatedAt = new Date(data.updatedAt)
   }
+
 }
 
 const data = {

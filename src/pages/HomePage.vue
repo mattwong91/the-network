@@ -1,26 +1,22 @@
 <template>
   <div class="container-fluid">
-    <section class="row justify-content-center">
 
+    <!-- SECTION POSTS -->
 
-      <!-- SECTION POSTS -->
-
-      <section v-if="posts.length" class="row p-4">
-        <div v-for="post in posts" :key="post.id" class="col-12 mb-3">
-          <PostCard :post="post" />
-        </div>
-        <Pagination />
-      </section>
-      <section v-else class="row text-center pt-5">
-        <div class="col-12 pt-5">
-          <div class="spinner-border" role="status"></div>
-        </div>
-      </section>
-
-      <!-- !SECTION POSTS -->
-
-
+    <section v-if="posts.length" class="row p-4">
+      <div v-for="post in posts" :key="post.id" class="col-12 mb-3">
+        <PostCard :post="post" />
+      </div>
+      <Pagination />
     </section>
+    <section v-else class="row text-center pt-5">
+      <div class="col-12 pt-5">
+        <div class="spinner-border" role="status"></div>
+      </div>
+    </section>
+
+    <!-- !SECTION POSTS -->
+
   </div>
 </template>
 

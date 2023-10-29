@@ -26,8 +26,6 @@
       <div v-for="post in posts" :key="post.id" class="col-12 mb-3">
         <PostCard :post="post" />
       </div>
-    </section>
-    <section class="row pb-5">
       <Pagination />
     </section>
   </div>
@@ -50,12 +48,14 @@ import Pop from "../utils/Pop";
 import { profilesService } from "../services/ProfilesService.js"
 import PostCard from "../components/PostCard.vue";
 import Pagination from "../components/Pagination.vue";
+import { postsService } from "../services/PostsService";
 
 export default {
   setup() {
     const route = useRoute();
     onMounted(() => {
       profilesService.clearData();
+      postsService.clearData();
       getProfileById();
       getPostsByProfileId();
     });
@@ -78,7 +78,7 @@ export default {
       }
     }
     return {
-      profile: computed(() => AppState.profile),
+      profile: computed(() => AppState.activeProfile),
       posts: computed(() => AppState.posts)
     };
   },
