@@ -10,7 +10,7 @@
           <router-view />
         </div>
         <!-- SECTION ADS -->
-        <div class="col-3 p-3">
+        <div class="col-3 p-4">
           <Advertisement />
         </div>
         <!-- !SECTION ADS -->
