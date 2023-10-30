@@ -1,8 +1,14 @@
 <template>
-  <div class="about text-center">
-    <h1>Welcome {{ account.name }}</h1>
-    <img class="rounded" :src="account.picture" alt="" />
-    <p>{{ account.email }}</p>
+  <div class="container-fluid">
+    <section class="row">
+      <div class="col-12">
+        <div class="about text-center">
+          <h1>Welcome {{ account.name }}</h1>
+          <img class="rounded-circle" :src="account.picture" alt="" />
+          <p>{{ account.email }}</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -13,7 +19,7 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account)
-    }
+    };
   }
 }
 </script>

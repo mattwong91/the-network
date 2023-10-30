@@ -21,7 +21,7 @@
           <p>{{ profile.bio }}</p>
         </div>
         <div v-if="account.id == profile.id" class="col-12 text-end mb-3">
-          <button class="btn btn-outline-primary">Edit</button>
+          <AccountEditModal :profile="profile" />
         </div>
       </div>
     </section>
@@ -52,6 +52,7 @@ import { profilesService } from "../services/ProfilesService.js"
 import PostCard from "../components/PostCard.vue";
 import Pagination from "../components/Pagination.vue";
 import { postsService } from "../services/PostsService";
+import AccountEditModal from "../components/AccountEditModal.vue";
 
 export default {
   setup() {
@@ -86,7 +87,7 @@ export default {
       account: computed(() => AppState.account)
     };
   },
-  components: { PostCard, Pagination }
+  components: { PostCard, Pagination, AccountEditModal }
 };
 </script>
 

@@ -1,7 +1,9 @@
 <template>
   <section class="row create-card px-2 py-3">
     <div class="col-3">
-      <img class="profile-img" :src="account.picture" :alt="account.name">
+      <router-link :to="{ name: 'Profile', params: { profileId: account.id } }">
+        <img class="profile-img" :src="account.picture" :alt="account.name">
+      </router-link>
     </div>
     <div class="col-9 ps-4">
       <form @submit.prevent="createPost()" class="row">
