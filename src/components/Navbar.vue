@@ -1,25 +1,18 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-    <router-link class="btn text-success lighten-30 selectable text-uppercase" :to="{ name: 'Home' }">
-      Home
+  <nav class="navbar navbar-expand-lg navbar-dark bg-network px-3">
+    <router-link class="btn text-light lighten-30 selectable text-uppercase" :to="{ name: 'Home' }">
+      The Network
     </router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
       aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto">
-        <li>
-          <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
-            About
-          </router-link>
-        </li>
-      </ul>
+    <div class="collapse navbar-collapse ps-3" id="navbarText">
+      <!-- LOGIN COMPONENT HERE -->
+      <Login />
       <div class="px-3">
         <router-link :to="{ name: 'SearchResults' }" class="btn btn-secondary mdi mdi-magnify"></router-link>
       </div>
-      <!-- LOGIN COMPONENT HERE -->
-      <Login />
     </div>
   </nav>
 </template>
@@ -53,5 +46,9 @@ a:hover {
   nav {
     height: 64px;
   }
+}
+
+.bg-network {
+  background-color: #0f6793;
 }
 </style>
