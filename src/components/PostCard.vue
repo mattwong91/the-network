@@ -1,9 +1,9 @@
 <template>
-  <section class="row post-card">
+  <section class="row post-card p-4">
     <div class="col-12 d-flex justify-content-between">
       <div class="d-flex align-items-center">
         <router-link :to="{ name: 'Profile', params: { profileId: post.creator.id } }">
-          <img class="p-4 profile-img" :src="post.creator.picture" :alt="post.creator.name">
+          <img class="profile-img" :src="post.creator.picture" :alt="post.creator.name">
         </router-link>
         <div class="ps-5">
           <h4>{{ post.creator.name }} <span v-if="post.creator.graduated" class="ps-3"><i
@@ -16,7 +16,7 @@
         <button @click="deletePost(post.id)" class="btn btn-outline-danger mdi mdi-trash-can"></button>
       </div>
     </div>
-    <div class="col-12 ps-5 pb-4">
+    <div class="col-12 ps-5 py-4">
       {{ post.body }}
     </div>
     <div class="col-12 cover">
