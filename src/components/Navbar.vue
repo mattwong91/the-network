@@ -10,9 +10,9 @@
     <div class="collapse navbar-collapse ps-3" id="navbarText">
       <!-- LOGIN COMPONENT HERE -->
       <Login />
-      <div class="px-3">
-        <router-link :to="{ name: 'SearchResults' }" class="btn btn-secondary mdi mdi-magnify"></router-link>
-      </div>
+    </div>
+    <div class="px-3">
+      <router-link :to="{ name: 'SearchResults' }" class="btn btn-secondary mdi mdi-magnify"></router-link>
     </div>
   </nav>
 </template>

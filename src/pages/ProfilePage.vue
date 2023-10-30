@@ -20,6 +20,9 @@
         <div class="col-12 py-4">
           <p>{{ profile.bio }}</p>
         </div>
+        <div v-if="account.id == profile.id" class="col-12 text-end mb-3">
+          <button class="btn btn-outline-primary">Edit</button>
+        </div>
       </div>
     </section>
     <section v-if="posts.length" class="row pt-5">
@@ -79,7 +82,8 @@ export default {
     }
     return {
       profile: computed(() => AppState.activeProfile),
-      posts: computed(() => AppState.posts)
+      posts: computed(() => AppState.posts),
+      account: computed(() => AppState.account)
     };
   },
   components: { PostCard, Pagination }
