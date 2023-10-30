@@ -1,6 +1,20 @@
 <template>
   <div class="container-fluid">
 
+    <!-- SECTION POST CREATION -->
+    <section v-if="account.id" class="row p-4">
+      <div class="col-12">
+        <PostSubmit />
+      </div>
+    </section>
+    <section v-else class="row text-center py-5">
+      <div class="col-12 pt-5">
+        <div class="spinner-border" role="status"></div>
+      </div>
+    </section>
+    <!-- !SECTION POST CREATION -->
+
+
     <!-- SECTION POSTS -->
 
     <section v-if="posts.length" class="row p-4">
@@ -9,7 +23,7 @@
       </div>
       <Pagination />
     </section>
-    <section v-else class="row text-center pt-5">
+    <section v-else class="row text-center py-5">
       <div class="col-12 pt-5">
         <div class="spinner-border" role="status"></div>
       </div>
@@ -27,6 +41,7 @@ import { AppState } from "../AppState";
 import Pop from "../utils/Pop";
 import { postsService } from "../services/PostsService.js"
 import Pagination from "../components/Pagination.vue";
+import PostSubmit from "../components/PostSubmit.vue";
 
 export default {
   setup() {
@@ -42,10 +57,11 @@ export default {
       }
     }
     return {
-      posts: computed(() => AppState.posts)
+      posts: computed(() => AppState.posts),
+      account: computed(() => AppState.account)
     };
   },
-  components: { PostCard, Pagination }
+  components: { PostCard, Pagination, PostSubmit }
 }
 </script>
 

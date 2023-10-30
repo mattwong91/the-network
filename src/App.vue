@@ -15,7 +15,7 @@
         </div>
         <!-- SECTION ADS -->
         <div class="col-3">
-          <h1>ADS</h1>
+          <Advertisement />
         </div>
         <!-- !SECTION ADS -->
       </section>
@@ -27,6 +27,7 @@
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import Navbar from './components/Navbar.vue'
+import Advertisement from "./components/Advertisement.vue"
 
 export default {
   setup() {
@@ -34,7 +35,7 @@ export default {
       appState: computed(() => AppState)
     }
   },
-  components: { Navbar }
+  components: { Navbar, Advertisement }
 }
 </script>
 
